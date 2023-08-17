@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+.bg-hero-background {
+  background-image: url("../public/hero.jpg");
+}
+
+.text-gradient {
+  background: var(
+    --gradient,
+    linear-gradient(
+      142deg,
+      #c1a01e 0%,
+      rgba(125, 197, 19, 1) 71.63%,
+      rgba(53, 235, 8, 0.99) 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.border-gradient {
+  background: linear-gradient(
+    142deg,
+    #c1a01e 0%,
+    rgba(125, 197, 19, 1) 71.63%,
+    rgba(53, 235, 8, 0.99) 100%
+  );
+}
