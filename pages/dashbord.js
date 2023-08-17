@@ -85,9 +85,9 @@ function dashbord() {
 
   return (
     //page screen
-    <div className="grid lg:grid-cols-[5fr,1.5fr] lg:h-screen lg:overflow-y-auto grid-cols-1 lg:w-full w-screen">
+    <div className="grid lg:grid-cols-[5fr,1.5fr] lg:h-screen lg:overflow-y-auto grid-cols-1 lg:w-full w-screen ">
       {/* main screen  */}
-      <main className=" flex flex-col  gap-4 bg-slate-100 relative">
+      <main className=" flex flex-col  gap-4 bg-slate-100 relative ">
         {/* search bar with date */}
         <div className="h-16  flex  items-center justify-between absolute top-0 w-full   px-2 lg:px-10">
           <div>
@@ -193,7 +193,7 @@ function dashbord() {
                 </div>
               </div>
               <div className="flex justify-between  pt-4">
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center ">
                   <div className="h-3 w-3 rounded-full bg-slate-600"></div>
                   <p> No Rain</p>
                 </div>
@@ -240,29 +240,34 @@ function dashbord() {
         </p>
 
         {/* lower version for main */}
-        <div className=" w-full bg-white  rounded-lg overflow-y-auto lg:max-h-[30vh] xl:max-h-[48vh] whitespace-nowrap  ">
-          <table className="w-full text-sm">
-            <thead className=" h-20  ">
-              <tr className="text-gray-500 sticky border-b top-0  bg-white tracking-tighter  w-full">
-                <th>Date</th>
-                <th>Weather condition</th>
-                <th>Crop perfomance</th>
-                <th>Status</th>
-                <th>Note</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableData.map((row) => (
-                <tr key={row.id} className=" tracking-tighter h-12 text-center">
-                  <td>{row.date}</td>
-                  <td>{row.rate}</td>
-                  <td>{row.condition}</td>
-                  <td>{row.status}</td>
-                  <td>{row.Note}</td>
+        <div className=" lg:w-full lg:px-10 px-2">
+          <div className="     bg-white  rounded-lg overflow-y-auto lg:max-h-[30vh] xl:max-h-[48vh] whitespace-nowrap ">
+            <table className="w-full text-sm">
+              <thead className=" h-20  ">
+                <tr className="text-gray-500 sticky border-b top-0  bg-white tracking-tighter  w-full">
+                  <th>Date</th>
+                  <th>Weather condition</th>
+                  <th>Crop perfomance</th>
+                  <th>Status</th>
+                  <th>Note</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {tableData.map((row) => (
+                  <tr
+                    key={row.id}
+                    className=" tracking-tighter h-12 text-center"
+                  >
+                    <td>{row.date}</td>
+                    <td>{row.rate}</td>
+                    <td>{row.condition}</td>
+                    <td>{row.status}</td>
+                    <td>{row.Note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </main>
       {/* second which has weather  */}

@@ -11,7 +11,7 @@ import Image from "next/image";
 function Layout({ children }) {
   return (
     <div className=" grid grid-cols-[1.4fr,6fr] h-screen">
-      <div className="bg-green-900   pt-10  flex-col justify-between lg:block hidden">
+      <div className="bg-green-900   pt-10 lg:flex flex-col justify-between lg:block hidden">
         <div className="text-2xl text-white flex flex-col  gap-8 pl-4 w-full ">
           <h1 className="text-3xl mb-10">My Farm 1</h1>
           <div className="flex items-center gap-2">
